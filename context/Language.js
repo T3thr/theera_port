@@ -1,4 +1,4 @@
-// context/language.js
+// context/Language.js
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
