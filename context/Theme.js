@@ -1,4 +1,4 @@
-// context/theme.js
+// context/Theme.js
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
