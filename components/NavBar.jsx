@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ChangeTheme from './ChangeTheme';  // Import the ChangeTheme component
-import { useTheme } from '@/context/theme';  // Import the ThemeProvider hook
-import { useLanguage } from '@/context/language';
+import { useTheme } from '@/context/Theme';  // Import the ThemeProvider hook
+import { useLanguage } from '@/context/Language';
 
 export default function NavBar() {
     const { language } = useLanguage();
