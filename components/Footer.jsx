@@ -4,7 +4,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ChangeLanguage from './ChangeLanguage'; // Import ChangeLanguage component
-import { useLanguage } from '@/context/Language';  // Import the language hook
+import { useLanguage } from '@/context/language';  // Import the language hook
 
 export default function Footer() {
     const { language, translations } = useLanguage();  // Access the language and translations

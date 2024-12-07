@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { useLanguage } from '@/context/Language'; // Import the language context
+import { useLanguage } from '@/context/language'; // Import the language context
 
 export default function ChangeLanguage() {
     const { language, changeLanguage } = useLanguage();
