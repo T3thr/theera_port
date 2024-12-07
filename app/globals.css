@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,22 +7,21 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
-
+*/
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Dark Mode Classes */
-.dark {
+body.dark {
   --background: #171717;
   --foreground: #ededed;
 }

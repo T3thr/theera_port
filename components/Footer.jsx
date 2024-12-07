@@ -1,9 +1,14 @@
+// components/Footer.jsx
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
+import ChangeLanguage from './ChangeLanguage'; // Import ChangeLanguage component
+import { useLanguage } from '@/context/language';  // Import the language hook
 
 export default function Footer() {
+    const { language, translations } = useLanguage();  // Access the language and translations
+
     return (
         <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-16 mt-20">
             <div className="container mx-auto px-6 lg:px-12 text-center lg:text-left">
@@ -12,10 +17,10 @@ export default function Footer() {
                     {/* Left Side: Brand Name */}
                     <div className="mb-8 lg:mb-0">
                         <h3 className="text-4xl font-extrabold text-blue-500 tracking-wider">
-                            MyPortfolio
+                            {translations[language].portfolioTitle} {/* Dynamically render title */}
                         </h3>
                         <p className="text-gray-400 mt-2 max-w-lg mx-auto lg:mx-0">
-                            A place where innovation meets creativity. Creating impactful digital experiences through code.
+                            {translations[language].description} {/* Dynamically render description */}
                         </p>
                     </div>
 
@@ -65,7 +70,7 @@ export default function Footer() {
                 <div className="border-t border-gray-600 pt-8 mt-12">
                     <div className="flex flex-col items-center lg:flex-row justify-between space-y-4 lg:space-y-0">
                         <p className="text-gray-400 text-sm">
-                            &copy; {new Date().getFullYear()} MyPortfolio. All rights reserved.
+                            &copy; {new Date().getFullYear()} Theera-Port. All rights reserved.
                         </p>
                         <div className="flex space-x-6">
                             <Link 
@@ -86,6 +91,10 @@ export default function Footer() {
                             </Link>
                         </div>
                     </div>
+                </div>
+                <div className="mt-4">
+                    {/* Language Toggle Button */}
+                    <ChangeLanguage /> {/* Add ChangeLanguage button here */}
                 </div>
             </div>
         </footer>

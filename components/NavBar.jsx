@@ -5,9 +5,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ChangeTheme from './ChangeTheme';  // Import the ChangeTheme component
-import { useTheme } from '@/context/Theme';  // Import the ThemeProvider hook
+import { useTheme } from '@/context/theme';  // Import the ThemeProvider hook
+import { useLanguage } from '@/context/language';
 
 export default function NavBar() {
+    const { language } = useLanguage();
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { isDarkMode, setIsDarkMode } = useTheme();  // Get the theme state from the provider
@@ -18,7 +20,7 @@ export default function NavBar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-lg z-50">
+        <nav className="top-0 left-0 w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-lg z-50">
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 {/* Hamburger Menu for Mobile */}
                 <button
@@ -29,9 +31,9 @@ export default function NavBar() {
                 </button>
 
                 {/* Logo */}
-                <div className="text-3xl font-extrabold text-blue-500 transform transition-transform duration-500 hover:scale-110">
+                <div className="text-3xl font-extrabold text-blue-500 ">
                     <Link href="/">
-                        <span>MyPortfolio</span>
+                    <span>MyPortfolio</span>
                     </Link>
                 </div>
 
@@ -45,9 +47,9 @@ export default function NavBar() {
                     } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
                 >
                     {[
-                        { href: '/', label: 'Work' },
-                        { href: '/about', label: 'About' },
-                        { href: '/contact', label: 'Contact' },
+                        { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },
+                        { href: '/about', label: language === 'en' ? 'About' : 'เกี่ยวกับฉัน'  },
+                        { href: '/contact', label: language === 'en' ? 'Contact' : 'ติดต่อ'  },
                     ].map((navItem) => (
                         <Link
                             key={navItem.href}
