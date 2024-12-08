@@ -72,7 +72,7 @@ const translations_about = {
     en: {
         heroTitle: "Hello, ",
         myname:"I'm Theerapat Pooraya",
-        heroDescription: "I'm passionate Computer Engineering student of Naresuan University specializing in web development and user-centered design concept. Nice to meet you..",
+        heroDescription: "I'm passionate Computer Engineering student of Naresuan University interesting in web-app development and user-centered design concept. Nice to meet you..",
         skillsTitle: "My Skills",
         programmingSkills: "Programming Skills",
         toolsSkills: "Tools",
@@ -84,7 +84,7 @@ const translations_about = {
     th: {
         heroTitle: "สวัสดีครับ",
         myname:"ผมชื่อ นายธีรภัทร ภู่ระย้า",
-        heroDescription: "ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยนเรศวร ขณะนี้สนใจเกี่ยวกับเว็บแอปพลิเคชัน และหลักการการออกแบบที่เน้นผู้ใช้งานเป็นหลัก ยินดีที่ได้รู้จักครับ",
+        heroDescription: "ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยนเรศวร ขณะนี้สนใจเกี่ยวกับการพัฒนาเว็บแอปพลิเคชัน และหลักการการออกแบบที่เน้นผู้ใช้งานเป็นหลัก ยินดีที่ได้รู้จักครับ",
         skillsTitle: "ความสามารถ",
         programmingSkills: "ทักษะการเขียนโปรแกรม",
         toolsSkills: "เครื่องมือที่ใช้ได้",
