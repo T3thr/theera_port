@@ -24,7 +24,7 @@ export default function NavBar() {
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 {/* Hamburger Menu for Mobile */}
                 <button
-                    className="lg:hidden text-blue-500 text-2xl focus:outline-none"
+                    className="lg:hidden text-blue-500 text-xl focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     ☰
@@ -33,7 +33,7 @@ export default function NavBar() {
                 {/* Logo */}
                 <div className="text-3xl font-extrabold text-blue-500 ">
                     <Link href="/">
-                    <span>MyPortfolio</span>
+                    <span>THEERAPORT</span>
                     </Link>
                 </div>
 
@@ -44,7 +44,7 @@ export default function NavBar() {
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
-                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
+                    } lg:flex lg:space-x-8 absolute lg:static top-16 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
                 >
                     {[
                         { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },

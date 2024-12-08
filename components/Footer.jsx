@@ -7,7 +7,7 @@ import ChangeLanguage from './ChangeLanguage';
 import { useLanguage } from '@/context/Language'; 
 
 export default function Footer() {
-    const { language, translations } = useLanguage();  // Access the language and translations
+    const { language, translations_footer } = useLanguage();  // Access the language and translations
 
     return (
         <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-16 mt-20">
@@ -17,10 +17,10 @@ export default function Footer() {
                     {/* Left Side: Brand Name */}
                     <div className="mb-8 lg:mb-0">
                         <h3 className="text-4xl font-extrabold text-blue-500 tracking-wider">
-                            {translations[language].portfolioTitle} {/* Dynamically render title */}
+                            {translations_footer[language].portfolioTitle} {/* Dynamically render title */}
                         </h3>
                         <p className="text-gray-400 mt-2 max-w-lg mx-auto lg:mx-0">
-                            {translations[language].description} {/* Dynamically render description */}
+                            {translations_footer[language].description} {/* Dynamically render description */}
                         </p>
                     </div>
 
