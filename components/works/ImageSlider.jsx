@@ -84,7 +84,7 @@ export default function ImageSlider() {
       {/* Image Slider */}
       <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, index) => (
-          <div key={index} className="flex-shrink-0 w-full">
+          <div key={index} className="flex-shrink-0 w-full pb-12">
             <Image src={image} alt={`Slide ${index}`} width={1200} height={800} className="object-cover w-full" />
           </div>
         ))}
