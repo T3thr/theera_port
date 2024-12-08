@@ -37,23 +37,25 @@ export default function NavBar() {
                 </div>
 
                 {/* Theme Toggle Button */}
+                <div className="lg:flex lg:justify-between lg:mr-24 content-center">
                 <ChangeTheme isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-
+                </div>
                 {/* Navigation Links */}
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
-                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
+                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto  from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
                 >
                     {[ 
                         { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },
                         { href: '/about', label: language === 'en' ? 'About' : 'เกี่ยวกับฉัน'  },
-                        { href: '/contact', label: language === 'en' ? 'Contact' : 'ติดต่อ'  },
+
+
                     ].map((navItem) => (
                         <Link
                             key={navItem.href}
                             href={navItem.href}
-                            className={`block px-6 py-2 lg:p-0 ${
+                            className={`block px-6 py-2 lg:p-0 z-50 ${
                                 pathname === navItem.href ? styles.active : styles.nonSelected
                             } relative group`}
                             onClick={() => setIsMenuOpen(false)}

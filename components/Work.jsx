@@ -44,22 +44,22 @@ export default function WorkPage() {
     ];
 
     return (
-        <div className="min-h-screen py-10 transition-all duration-500 bg-var-background text-var-foreground">
+        <div className="min-h-auto py-10 transition-all duration-500 bg-var-background text-var-foreground">
             {/* Header Section */}
             <header className="text-center mt-12 mb-12">
                 <h1 className="text-5xl font-extrabold tracking-tight mb-4">
                     {translations_content[language].portfolioTitle}
                 </h1>
-                <p className="text-lg max-w-4xl w-full mr-2 ml-2 mx-auto">
+                <p className="text-lg max-w-4xl w-full mx-auto">
                     {translations_content[language].description}
                 </p>
             </header>
 
             {/* Navigation Bar */}
-            <nav className={`flex justify-center mb-16 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 transition-shadow duration-300 shadow-lg ${
+            <nav className={`flex justify-center mb-32 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 transition-shadow duration-300 shadow-lg ${
                     isDarkMode
-                        ? 'shadow-[var(--shadow)]' // Apply shadow from the dark theme variable
-                        : 'shadow-md' // Default shadow for light theme
+                        ? 'shadow-[var(--shadow)]'
+                        : 'shadow-md' 
                 }`}>
                 <button
                     className="text-lg font-medium hover:text-blue-500 transition duration-300"
@@ -89,7 +89,7 @@ export default function WorkPage() {
                         {categories.map((category) => (
                             <Link key={category.id} href={category.link}>
                                 <div
-                                    className="w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105 bg-var-container"
+                                    className="ml-6 mt-6 mb-6 w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md transform transition-transform hover:text-blue-500 hover:scale-105 bg-var-container"
                                     role="link"
                                     aria-label={`View ${category.title}`}
                                 >
@@ -99,7 +99,7 @@ export default function WorkPage() {
                                         className="w-full h-56 object-cover"
                                     />
                                     <div className="p-6 min-h-32">
-                                        <h3 className="text-xl font-bold mb-2 hover:text-blue-500">
+                                        <h3 className="text-xl font-bold mb-2 ">
                                             {category.title}
                                         </h3>
                                         <p className="text-var-muted">
@@ -128,13 +128,13 @@ export default function WorkPage() {
                         {softSkills.map((skill) => (
                             <Link key={skill.id} href={skill.link}>
                                 <div
-                                    className="w-80 flex-shrink-0 flex items-center space-x-4 p-6 rounded-lg shadow-md transform transition-transform hover:scale-105 bg-var-container"
+                                    className="ml-6 mt-6 mb-6 w-80 flex-shrink-0 flex items-center space-x-4 p-6 rounded-lg shadow-md transform transition-transform hover:text-blue-500 hover:scale-105 bg-var-container"
                                     role="link"
                                     aria-label={`View details for ${skill.title}`}
                                 >
                                     <div className="text-4xl">{skill.icon}</div>
                                     <div>
-                                        <h3 className="text-xl font-bold hover:text-blue-500">
+                                        <h3 className="text-xl font-bold ">
                                             {skill.title}
                                         </h3>
                                         <p className="text-var-muted">

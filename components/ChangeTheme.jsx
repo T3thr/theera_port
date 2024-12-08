@@ -25,8 +25,8 @@ export default function ChangeTheme({ isDarkMode, setIsDarkMode }) {
             {isMobile ? (
                 <button
                     onClick={() => setIsDarkMode(!isDarkMode)}
-                    className={`lg:block text-xl text-blue-500 ml-4 rounded-full ${
-                        isDarkMode ? 'bg-fuchsia-700' : 'bg-yellow-200'
+                    className={`lg:block text-xl text-blue-500 rounded-full ${
+                        isDarkMode ? 'bg-fuchsia-900' : 'bg-yellow-100'
                     }`}
                 >
                     {isDarkMode ? '🌙' : '🌞'}
@@ -38,7 +38,7 @@ export default function ChangeTheme({ isDarkMode, setIsDarkMode }) {
                 >
                     <div
                         className={`relative flex items-center justify-center w-16 h-8 rounded-full transition-all duration-300 ease-in-out ${
-                            isDarkMode ? 'bg-fuchsia-700' : 'bg-yellow-200'
+                            isDarkMode ? 'bg-fuchsia-900' : 'bg-yellow-100'
                         }`}
                     >
                         <div

@@ -10,8 +10,8 @@ export default function Footer() {
     const { language, translations_footer } = useLanguage();  // Access the language and translations
 
     return (
-        <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-16 mt-20">
-            <div className="container mx-auto px-6 lg:px-12 text-center lg:text-left">
+        <footer className="bottom-0 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-6 mt-20">
+            <div className="container mx-auto px-6 lg:px-2 text-center lg:text-left">
                 {/* Top Section: Brand and Description */}
                 <div className="lg:flex lg:justify-between mb-12">
                     {/* Left Side: Brand Name */}
@@ -38,11 +38,6 @@ export default function Footer() {
                                 <li>
                                     <Link href="/about" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
                                         About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
-                                        Contact
                                     </Link>
                                 </li>
                             </ul>
