@@ -44,7 +44,7 @@ export default function NavBar() {
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
-                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto  from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
+                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto  from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0 z-50`}
                 >
                     {[ 
                         { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },

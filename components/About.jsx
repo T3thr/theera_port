@@ -35,8 +35,8 @@ export default function AboutPage() {
             name: 'JavaScript' , 
             icon: <SiJavascript className="text-yellow-500" />, 
             description: language === 'en' 
-                ? 'Advanced knowledge of modern JavaScript and frameworks.' 
-                : 'ความรู้ขั้นสูงเกี่ยวกับจาวาสคริปต์สมัยใหม่และเฟรมเวิร์กต่าง ๆ' 
+                ? 'basic knowledge of modern JavaScript and frameworks.' 
+                : 'มีความรู้พื้นฐานกี่ยวกับจาวาสคริปต์สมัยใหม่และเฟรมเวิร์กต่าง ๆ' 
         },
         { 
             id: 2, 
