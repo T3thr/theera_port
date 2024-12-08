@@ -10,9 +10,8 @@ export default function UxcoffeePage() {
 
   return (
     <div
-      className={`min-h-screen py-8 ${
-        isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-      }`}
+      className='min-h-screen py-8 transition-all duration-500 bg-var-background text-var-foreground'
+      
     >
       <div className="container mx-auto px-4">
         <header className="text-center mb-8">
