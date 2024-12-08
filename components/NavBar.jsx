@@ -1,4 +1,3 @@
-// components/NavBar.jsx
 'use client';
 
 import React, { useState } from 'react';
@@ -24,16 +23,16 @@ export default function NavBar() {
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 {/* Hamburger Menu for Mobile */}
                 <button
-                    className="lg:hidden text-blue-500 text-xl focus:outline-none"
+                    className="lg:hidden text-blue-500 text-2xl focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     ☰
                 </button>
 
                 {/* Logo */}
-                <div className="text-3xl font-extrabold text-blue-500 ">
+                <div className="text-3xl font-extrabold text-blue-500">
                     <Link href="/">
-                    <span>THEERAPORT</span>
+                        <span>THEEPAPORT</span>
                     </Link>
                 </div>
 
@@ -44,9 +43,9 @@ export default function NavBar() {
                 <div
                     className={`${
                         isMenuOpen ? 'block' : 'hidden'
-                    } lg:flex lg:space-x-8 absolute lg:static top-16 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
+                    } lg:flex lg:space-x-8 absolute lg:static top-16 left-0 w-full lg:w-auto bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-md lg:shadow-none lg:bg-transparent py-4 lg:py-0`}
                 >
-                    {[
+                    {[ 
                         { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },
                         { href: '/about', label: language === 'en' ? 'About' : 'เกี่ยวกับฉัน'  },
                         { href: '/contact', label: language === 'en' ? 'Contact' : 'ติดต่อ'  },
