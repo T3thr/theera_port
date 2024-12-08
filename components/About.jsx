@@ -186,7 +186,7 @@ export default function AboutPage() {
                 <div className="text-center mb-8">
                     <p className="text-lg mb-4 mt-8">{text.contactDescription}</p>
                     <a
-                        href="theerapatpo66@nu.ac.th"
+                        href="mailto:theerapatpo66@nu.ac.th"
                         className="px-6 py-3 text-lg font-medium text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
                     >
                         {text.contactButton}
