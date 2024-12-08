@@ -56,11 +56,7 @@ export default function WorkPage() {
             </header>
 
             {/* Navigation Bar */}
-            <nav                 className={`flex justify-center mb-16 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 transition-shadow duration-300 shadow-lg ${
-                    isDarkMode
-                        ? 'shadow-[var(--shadow)]' // Apply shadow from the dark theme variable
-                        : 'shadow-md' // Default shadow for light theme
-                }`}>
+            <nav className="flex justify-center mb-16 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 shadow-lg">
                 <button
                     className="text-lg font-medium hover:text-blue-500 transition duration-300"
                     onClick={() =>
@@ -84,28 +80,32 @@ export default function WorkPage() {
                 <h2 className="text-3xl font-bold mb-6 text-center border-b-4 border-blue-500 inline-block pb-2">
                     Categories
                 </h2>
-                <div className="flex overflow-x-visible space-x-6 scrollbar-hide">
-                    {categories.map((category) => (
-                        <Link key={category.id} href={category.link}>
-                            <div
-                                className="flex-shrink-0 w-80 rounded-lg overflow-hidden shadow-md transform transition-transform hover:text-blue-500 hover:scale-105"
-                                role="link"
-                                aria-label={`View ${category.title}`}
-                            >
-                                <img
-                                    src={category.image}
-                                    alt={category.title}
-                                    className="w-full h-56 object-cover"
-                                />
-                                <div className="p-6 bg-var-container min-h-32">
-                                    <h3 className="text-xl font-bold mb-2 ">
-                                        {category.title}
-                                    </h3>
-                                    <p className="text-var-muted h-auto">{category.description}</p>
+                <div className="overflow-x-auto scrollbar-hide">
+                    <div className="flex space-x-6">
+                        {categories.map((category) => (
+                            <Link key={category.id} href={category.link}>
+                                <div
+                                    className="w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md transform transition-transform hover:scale-105 bg-var-container"
+                                    role="link"
+                                    aria-label={`View ${category.title}`}
+                                >
+                                    <img
+                                        src={category.image}
+                                        alt={category.title}
+                                        className="w-full h-56 object-cover"
+                                    />
+                                    <div className="p-6 min-h-32">
+                                        <h3 className="text-xl font-bold mb-2 hover:text-blue-500">
+                                            {category.title}
+                                        </h3>
+                                        <p className="text-var-muted">
+                                            {category.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
-                    ))}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -119,24 +119,28 @@ export default function WorkPage() {
                 <h2 className="text-3xl font-bold mb-6 text-center border-b-4 border-blue-500 inline-block pb-2">
                     305202 Soft Skills 4
                 </h2>
-                <div className="flex overflow-x-visible space-x-6 scrollbar-hide">
-                    {softSkills.map((skill) => (
-                        <Link key={skill.id} href={skill.link}>
-                            <div
-                                className="flex-shrink-0 w-80 flex items-center space-x-4 p-6 rounded-lg shadow-md transform transition-transform hover:text-blue-500 hover:scale-105 bg-var-container"
-                                role="link"
-                                aria-label={`View details for ${skill.title}`}
-                            >
-                                <div className="text-4xl">{skill.icon}</div>
-                                <div>
-                                    <h3 className="text-xl font-bold ">
-                                        {skill.title}
-                                    </h3>
-                                    <p className="text-var-muted">{skill.description}</p>
+                <div className="overflow-x-auto scrollbar-hide">
+                    <div className="flex space-x-6">
+                        {softSkills.map((skill) => (
+                            <Link key={skill.id} href={skill.link}>
+                                <div
+                                    className="w-80 flex-shrink-0 flex items-center space-x-4 p-6 rounded-lg shadow-md transform transition-transform hover:scale-105 bg-var-container"
+                                    role="link"
+                                    aria-label={`View details for ${skill.title}`}
+                                >
+                                    <div className="text-4xl">{skill.icon}</div>
+                                    <div>
+                                        <h3 className="text-xl font-bold hover:text-blue-500">
+                                            {skill.title}
+                                        </h3>
+                                        <p className="text-var-muted">
+                                            {skill.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
-                    ))}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>
