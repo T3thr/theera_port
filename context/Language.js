@@ -18,7 +18,10 @@ const translations_footer = {
                 and achievements. This site will be a lifelong record of that progress. 
                 Thank you for visiting and exploring this simple journey.
             </>
-        )
+        ),
+        shortcut: 'Shortcuts',
+        home:'Home',
+        about: 'About Me',
     },
     th: {
         portfolioTitle: 'THEERAPORT',
@@ -29,7 +32,10 @@ const translations_footer = {
                 ที่เว็บไซต์แห่งนี้จะเป็นบันทึกการเดินทางตลอดชีวิตของผม 
                 ขอบคุณที่แวะมาเยี่ยมชมการเดินทางที่แสนธรรมดานี้
             </>
-        )
+        ),
+        shortcut: 'ทางลัด',
+        home:'หน้าหลัก',
+        about: 'เกี่ยวกับฉัน',
     }
 };
 
@@ -48,7 +54,7 @@ const translations_content= {
         )
     },
     th: {
-        portfolioTitle: 'ผลงานของฉัน',
+        portfolioTitle: 'ผลงานของข้าพเจ้า',
         description: (
             <>
                 เว็บไซต์สะสมผลงานแห่งนี้จะเน้นไปที่ผลงานในมหาวิทยาลัยของผม 

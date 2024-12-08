@@ -28,16 +28,16 @@ export default function Footer() {
                     <div className="lg:flex lg:space-x-16">
                         {/* Quick Links */}
                         <div className="mb-8 lg:mb-0">
-                            <h4 className="text-xl font-semibold text-gray-300 mb-4">Quick Links</h4>
+                            <h4 className="text-xl font-semibold text-gray-300 mb-4">{translations_footer[language].shortcut}</h4>
                             <ul className="space-y-3">
                                 <li>
                                     <Link href="/" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
-                                        Home
+                                        {translations_footer[language].home}
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/about" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
-                                        About
+                                        {translations_footer[language].about}
                                     </Link>
                                 </li>
                                 <li>

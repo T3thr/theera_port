@@ -14,21 +14,21 @@ export default function WorkPage() {
             id: 1,
             title: 'Certificates',
             description: 'Showcase of my earned certifications.',
-            image: '/images/ai-category.jpg',
+            image: 'https://res.cloudinary.com/dr0ao4k6a/image/upload/v1733686707/LINE_ALBUM_%E0%B9%81%E0%B8%A1%E0%B8%A7__241209_1_ws6egw.jpg',
             link: '/works/certificate',
         },
         {
             id: 2,
             title: 'NEXT.JS',
             description: 'Web-app Projects built using Next.js framework.',
-            image: '/images/web-dev-category.jpg',
+            image: 'https://res.cloudinary.com/dr0ao4k6a/image/upload/v1733686707/LINE_ALBUM_%E0%B9%81%E0%B8%A1%E0%B8%A7__241209_1_ws6egw.jpg',
             link: '/works/dev',
         },
         {
             id: 3,
             title: 'Editor',
             description: 'Projects related to content editing tools.',
-            image: '/images/mobile-category.jpg',
+            image: 'https://res.cloudinary.com/dr0ao4k6a/image/upload/v1733686707/LINE_ALBUM_%E0%B9%81%E0%B8%A1%E0%B8%A7__241209_1_ws6egw.jpg',
             link: '/works/editor',
         },
     ];
@@ -46,7 +46,7 @@ export default function WorkPage() {
     return (
         <div className="min-h-auto py-10 transition-all duration-500 bg-var-background text-var-foreground">
             {/* Header Section */}
-            <header className="text-center mt-12 mb-12">
+            <header className="text-center mt-12 mb-12 justify-center px-6">
                 <h1 className="text-5xl font-extrabold tracking-tight mb-4">
                     {translations_content[language].portfolioTitle}
                 </h1>
