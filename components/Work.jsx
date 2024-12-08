@@ -50,13 +50,17 @@ export default function WorkPage() {
                 <h1 className="text-5xl font-extrabold tracking-tight mb-4">
                     {translations_content[language].portfolioTitle}
                 </h1>
-                <p className="text-lg max-w-4xl w-full mx-auto">
+                <p className="text-lg max-w-4xl w-full mr-2 ml-2 mx-auto">
                     {translations_content[language].description}
                 </p>
             </header>
 
             {/* Navigation Bar */}
-            <nav className="flex justify-center mb-16 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 shadow-lg">
+            <nav className={`flex justify-center mb-16 space-x-6 sticky top-0 bg-opacity-80 backdrop-blur-md py-4 z-50 transition-shadow duration-300 shadow-lg ${
+                    isDarkMode
+                        ? 'shadow-[var(--shadow)]' // Apply shadow from the dark theme variable
+                        : 'shadow-md' // Default shadow for light theme
+                }`}>
                 <button
                     className="text-lg font-medium hover:text-blue-500 transition duration-300"
                     onClick={() =>
