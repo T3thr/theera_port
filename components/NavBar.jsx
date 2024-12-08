@@ -32,7 +32,7 @@ export default function NavBar() {
                 {/* Logo */}
                 <div className="text-3xl font-extrabold text-blue-500">
                     <Link href="/">
-                        <span>THEEPAPORT</span>
+                        <span>THEERAPORT</span>
                     </Link>
                 </div>
 
@@ -49,7 +49,7 @@ export default function NavBar() {
                 >
                     {[
                         { href: '/', label: language === 'en' ? 'Work' : 'ผลงาน' },
-                        { href: '/about', label: language === 'en' ? 'About' : 'เกี่ยวกับฉัน' },
+                        { href: '/about', label: language === 'en' ? 'About Me' : 'เกี่ยวกับฉัน' },
                     ].map((navItem) => (
                         <Link
                             key={navItem.href}

@@ -36,7 +36,7 @@ export default function WorkPage() {
     const softSkills = [
         {
             id: 1,
-            title: 'UX Design for Coffee Cup',
+            title: language === 'en' ? 'UX Design for Coffee Cup' : 'ออกแบบ ux สำหรับแก้วกาแฟ',
             description: 'Redesigning coffee cups to enhance usability.',
             icon: '🥤',
             link: '/works/uxcoffee',

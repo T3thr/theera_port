@@ -70,43 +70,36 @@ export default function AboutPage() {
                 ? 'Managing and integrating data with MongoDB.' 
                 : 'จัดการข้อมูลหลังบ้านด้วย MongoDB ' 
         },
-    ];
-
-    const toolsSkills = [
         { 
-            id: 1, 
+            id: 6, 
             name: 'Tailwind CSS' , 
             icon: <SiTailwindcss className="text-blue-400" />, 
             description: language === 'en' 
                 ? 'Creating stunning, responsive designs with Tailwind CSS.' 
                 : 'ออกแบบหน้าเว็บด้วย Tailwind CSS' 
         },
+    ];
+
+    const toolsSkills = [
         { 
-            id: 2, 
+            id: 1, 
             name: 'Git & GitHub' , 
             icon: <FaGithub className="text-gray-700" />, 
             description: language === 'en' 
                 ? 'Version control and collaboration using Git and GitHub.' 
                 : 'ควบคุมเวอร์ชันและทำงานร่วมกันด้วย Git และ GitHub' 
         },
+
         { 
             id: 3, 
-            name: 'Database Management' , 
-            icon: <FaDatabase className="text-orange-400" />, 
-            description: language === 'en' 
-                ? 'Efficient database design and management.' 
-                : 'ออกแบบและจัดการฐานข้อมูลอย่างมีประสิทธิภาพ' 
-        },
-        { 
-            id: 4, 
             name: 'Adobe Premiere Pro' , 
-            icon: <SiAdobepremierepro className="text-red-500" />, 
+            icon: <SiAdobepremierepro className="text-blue-900" />, 
             description: language === 'en' 
                 ? 'Creating and editing high-quality video content such as short film ' 
                 : 'สามารถตัดต่อวิดีโอคุณภาพสูง เช่น ตัดต่อหนังสั้น' 
         },
         { 
-            id: 5, 
+            id: 4, 
             name: 'Adobe Photoshop' , 
             icon: <SiAdobephotoshop className="text-blue-500" />, 
             description: language === 'en' 
@@ -114,9 +107,9 @@ export default function AboutPage() {
                 : 'ออกแบบและแต่งภาพด้วย Photoshop' 
         },
         { 
-            id: 6, 
+            id: 5, 
             name: 'Adobe After Effects' , 
-            icon: <SiAdobeaftereffects className="text-purple-500" />, 
+            icon: <SiAdobeaftereffects className="text-purple-800" />, 
             description: language === 'en' 
                 ? 'Crafting stunning animations and visual effects from footage.' 
                 : 'สามารถสร้างแอนิเมชันและเอฟเฟกต์สามมิติจากวิดีโอฟุตเทจ' 

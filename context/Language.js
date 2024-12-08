@@ -35,7 +35,7 @@ const translations_footer = {
 
 const translations_content= {
     en: {
-        portfolioTitle: 'My Work Showcase',
+        portfolioTitle: 'My Portfolio',
         description: (
             <>
                 This portfolio website highlights my university work, with a focus on the Soft Skills 4 subject 
@@ -69,21 +69,21 @@ const translations_about = {
         heroDescription: "I'm passionate Computer Engineering student of Naresuan University specializing in web development and user-centered design concept. Nice to meet you..",
         skillsTitle: "My Skills",
         programmingSkills: "Programming Skills",
-        toolsSkills: "Tools Skills",
+        toolsSkills: "Tools",
         contactTitle: "Contact Me",
-        contactDescription: "Feel free to reach out via email or connect on social media!",
+        contactDescription: "Feel free to reach out via email ",
         contactButton: "Send an Email",
-        connectTitle: "or follow me on",
+        connectTitle: "or follow me on social media!",
     },
     th: {
         heroTitle: "สวัสดีครับ",
         myname:"ผมชื่อ นายธีรภัทร ภู่ระย้า",
-        heroDescription: "ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยนเรศวรที่ขณะนี้สนใจในเว็บแอปพลิเคชัน และหลักการการออกแบบที่เน้นผู้ใช้งานเป็นหลัก ยินดีที่ได้รู้จักครับ",
+        heroDescription: "ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยนเรศวร ขณะนี้สนใจเกี่ยวกับเว็บแอปพลิเคชัน และหลักการการออกแบบที่เน้นผู้ใช้งานเป็นหลัก ยินดีที่ได้รู้จักครับ",
         skillsTitle: "ความสามารถ",
         programmingSkills: "ทักษะการเขียนโปรแกรม",
         toolsSkills: "เครื่องมือที่ใช้ได้",
         contactTitle: "ช่องทางติดต่อ",
-        contactDescription: "สามารถติดต่อผมได้ทางอีเมลหรือโซเชียลมีเดีย",
+        contactDescription: "สามารถติดต่อผมได้ทางอีเมล",
         contactButton: "อีเมล",
         connectTitle: "หรือแอดช่องทางข้างล่างนี้",
     },

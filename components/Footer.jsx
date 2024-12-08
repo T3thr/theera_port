@@ -40,10 +40,15 @@ export default function Footer() {
                                         About
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link href="/works/uxcoffee" className="text-gray-400 hover:text-blue-500 transition-all duration-300">
+                                        Soft Skills4 work1
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
-                        {/* Social Media Links */}
+                        {/* Social Media Links 
                         <div>
                             <h4 className="text-xl font-semibold text-gray-300 mb-4">Follow Me</h4>
                             <div className="flex justify-center lg:justify-start space-x-8 mt-4">
@@ -57,7 +62,7 @@ export default function Footer() {
                                     <i className="fab fa-twitter fa-2x"></i>
                                 </a>
                             </div>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
 
