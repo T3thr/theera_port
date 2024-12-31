@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/context/Theme'; 
 import { LanguageProvider } from '@/context/Language';
+import { cookies } from 'next/headers';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,9 +48,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const themeCookie = cookies().get('theme')?.value || 'light';
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={themeCookie === 'dark' ? 'dark' : 'light' `${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageProvider> 
           <ThemeProvider>
             <NavBar className="z-50" />
