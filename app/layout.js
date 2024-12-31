@@ -42,7 +42,7 @@ export const metadata = {
     },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
     // Read the theme preference from cookies
     const themeCookie = cookies().get('theme')?.value || 'light';
     return (
