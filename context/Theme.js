@@ -1,23 +1,33 @@
-// context/Theme.js
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-
+import { setCookie, getCookie } from 'cookies-next';
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children, initialTheme }) {
     const [isDarkMode, setIsDarkMode] = useState(initialTheme === 'dark');
 
-    // Update the theme in cookies and on the <html> element
+    // Check cookies for saved theme preference if no initialTheme is passed
     useEffect(() => {
-        const root = document.documentElement;
+        if (!initialTheme) {
+            const savedTheme = getCookie('theme');
+            if (savedTheme === 'dark') {
+                setIsDarkMode(true);
+            } else {
+                setIsDarkMode(false);
+            }
+        }
+    }, [initialTheme]);
+
+    // Update cookies and body class when theme changes
+    useEffect(() => {
         if (isDarkMode) {
-            root.classList.add('dark');
-            document.cookie = 'theme=dark; path=/; max-age=31536000';
+            document.body.classList.add('dark');
+            setCookie('theme', 'dark');
         } else {
-            root.classList.remove('dark');
-            document.cookie = 'theme=light; path=/; max-age=31536000';
+            document.body.classList.remove('dark');
+            setCookie('theme', 'light');
         }
     }, [isDarkMode]);
 
