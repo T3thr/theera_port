@@ -1,8 +1,11 @@
+// components/ChangeTheme.jsx
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTheme } from '@/context/Theme';
 
-export default function ChangeTheme({ isDarkMode, setIsDarkMode }) {
+export default function ChangeTheme() {
+    const { isDarkMode, setIsDarkMode } = useTheme();
     const [isMobile, setIsMobile] = useState(false);
 
     // Check screen size to toggle between mobile and desktop view

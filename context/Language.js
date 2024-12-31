@@ -64,7 +64,6 @@ const translations_content= {
                 เนื้อหาภายในเว็บไซต์นี้สะท้อนถึงตัวตนและความถนัดของผมผ่านผลงานต่างๆที่ผมได้ทำ ขณะเดียวกันผมก็ยังคงพัฒนาตัวเองให้ดียิ่งขึ้นไปอย่างไม่หยุดหย่อน
             </>
         )
-    
     }
 };
 
@@ -95,34 +94,27 @@ const translations_about = {
     },
 };
 
-
-export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState('en');
-    const [isClient, setIsClient] = useState(false); // Track whether we're on the client-side
+export const LanguageProvider = ({ children, initialLanguage = 'en' }) => {
+    const [language, setLanguage] = useState(initialLanguage);
 
     useEffect(() => {
-        // Ensure that we are on the client side before accessing localStorage
-        setIsClient(true);
-
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            setLanguage(savedLanguage);
+        document.cookie = `language=${language}; path=/; max-age=31536000`; // Save to cookie for 1 year
+        const root = document.documentElement;
+        if (language === 'th') {
+            root.classList.add('lang-th');
+            root.classList.remove('lang-en');
+        } else {
+            root.classList.add('lang-en');
+            root.classList.remove('lang-th');
         }
-    }, []);
-
-    useEffect(() => {
-        // Only update localStorage on the client-side
-        if (isClient) {
-            localStorage.setItem('language', language);
-        }
-    }, [language, isClient]);
+    }, [language]);
 
     const changeLanguage = (lang) => {
         setLanguage(lang);
     };
 
     return (
-        <LanguageContext.Provider value={{ language, changeLanguage, translations_footer ,translations_content ,translations_about }}>
+        <LanguageContext.Provider value={{ language, changeLanguage, translations_footer, translations_content, translations_about }}>
             {children}
         </LanguageContext.Provider>
     );

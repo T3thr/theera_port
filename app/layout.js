@@ -43,15 +43,16 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-    // Read the theme preference from cookies
     const themeCookie = cookies().get('theme')?.value || 'light';
+    const languageCookie = cookies().get('language')?.value || 'en'; // Default to 'en' if no cookie is set
+
     return (
-        <html lang="en">
+        <html lang={languageCookie}>
             <body
-                className={themeCookie === 'dark' ? 'dark' : 'light'`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${themeCookie === 'dark' ? 'dark' : 'light'} ${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <LanguageProvider>
-                <ThemeProvider initialTheme={themeCookie}>
+                <LanguageProvider initialLanguage={languageCookie}>
+                    <ThemeProvider initialTheme={themeCookie}>
                         <NavBar className="z-50" />
                         {children}
                         <Footer />
