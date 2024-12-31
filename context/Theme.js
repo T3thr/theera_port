@@ -1,16 +1,16 @@
-// context/Theme.js
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    // Check localStorage for saved theme preference
+    // Check cookies for saved theme preference
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
+        const savedTheme = Cookies.get('theme');
         if (savedTheme === 'dark') {
             setIsDarkMode(true);
         } else {
@@ -18,14 +18,14 @@ export function ThemeProvider({ children }) {
         }
     }, []);
 
-    // Update localStorage and body class when theme changes
+    // Update cookies and body class when theme changes
     useEffect(() => {
         if (isDarkMode) {
             document.body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+            Cookies.set('theme', 'dark', { expires: 30 });
         } else {
             document.body.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+            Cookies.set('theme', 'light', { expires: 30 });
         }
     }, [isDarkMode]);
 

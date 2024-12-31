@@ -1,4 +1,3 @@
-// components/ChangeTheme.jsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -9,11 +8,7 @@ export default function ChangeTheme({ isDarkMode, setIsDarkMode }) {
     // Check screen size to toggle between mobile and desktop view
     useEffect(() => {
         const checkMobile = () => {
-            if (window.innerWidth <= 1024) {
-                setIsMobile(true);
-            } else {
-                setIsMobile(false);
-            }
+            setIsMobile(window.innerWidth <= 1024);
         };
         window.addEventListener('resize', checkMobile);
         checkMobile(); // Initialize on load
