@@ -35,14 +35,14 @@ export default function ImageSlider() {
   };
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 8000);
+    const interval = setInterval(handleNext, 20000);
     return () => clearInterval(interval);
   }, []);
 
   const resetArrowTimeout = () => {
     clearTimeout(interactionTimeout.current);
     setShowArrows(true);
-    interactionTimeout.current = setTimeout(() => setShowArrows(false), 3000);
+    interactionTimeout.current = setTimeout(() => setShowArrows(false), 1500);
   };
 
   const handleTouchStart = (e) => {
